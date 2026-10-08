@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="وصّلني للتوصيل - خدمات توصيل سريعة وآمنة">
+    <title>وصّلني للتوصيل | خدمات التوصيل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="#home" class="logo"><span>وصّلني</span> للتوصيل</a>
+        <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+        <nav id="mainNav">
+            <a href="#home">الرئيسية</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#tracking">تتبع الطلب</a>
+            <a href="#pricing">الأسعار</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+        <a class="nav-cta" href="#order">اطلب الآن</a>
+    </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <span class="badge">🚚 توصيل سريع وآمن داخل السلطنة</span>
+            <h1>نوصّل طلبك<br><span>بسرعة وأمان</span></h1>
+            <p>خدمة توصيل احترافية للطرود والمستندات والطلبات، مع متابعة سهلة ودعم متواصل.</p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn primary">اطلب توصيل الآن</a>
+                <a href="#tracking" class="btn secondary">تتبع شحنتك</a>
+            </div>
+            <div class="stats">
+                <div><strong>+5,000</strong><small>طلب تم توصيله</small></div>
+                <div><strong>98%</strong><small>رضا العملاء</small></div>
+                <div><strong>24/7</strong><small>خدمة العملاء</small></div>
+            </div>
+        </div>
+        <div class="hero-card">
+            <div class="delivery-icon">🚚</div>
+            <h3>طلبك في الطريق</h3>
+            <p>رقم الشحنة: <b>WD-2026-1088</b></p>
+            <div class="progress">
+                <span class="active"></span><span class="active"></span><span></span><span></span>
+            </div>
+            <div class="steps"><span>تم الاستلام</span><span>قيد التوصيل</span><span>تم التسليم</span></div>
+            <div class="mini-info"><span>📍 صحار</span><span>⏱ 25 دقيقة</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section">
+    <div class="container">
+        <div class="section-title">
+            <span>خدماتنا</span>
+            <h2>حلول توصيل تناسب احتياجاتك</h2>
+            <p>نوفر لك خدمات مرنة للأفراد والمتاجر والشركات.</p>
+        </div>
+        <div class="cards">
+            <article class="card"><div class="card-icon">📦</div><h3>توصيل الطرود</h3><p>استلام وتسليم الطرود بعناية وفي الوقت المناسب.</p></article>
+            <article class="card"><div class="card-icon">📄</div><h3>توصيل المستندات</h3><p>خدمة سريعة وآمنة للمستندات والملفات المهمة.</p></article>
+            <article class="card"><div class="card-icon">🛍️</div><h3>توصيل المتاجر</h3><p>حل متكامل للمتاجر الإلكترونية لتوصيل الطلبات للعملاء.</p></article>
+            <article class="card"><div class="card-icon">⚡</div><h3>التوصيل السريع</h3><p>خيارات توصيل عاجلة للطلبات التي تحتاج سرعة إضافية.</p></article>
+        </div>
+    </div>
+</section>
+
+<section id="tracking" class="section light">
+    <div class="container tracking-box">
+        <div>
+            <span class="section-label">تتبع الشحنة</span>
+            <h2>أين وصل طلبك؟</h2>
+            <p>أدخل رقم الشحنة لمعرفة آخر تحديث لطلبك.</p>
+        </div>
+        <form id="trackingForm" class="tracking-form">
+            <input id="trackingNumber" type="text" placeholder="مثال: WD-2026-1088" required>
+            <button class="btn primary" type="submit">تتبع الآن</button>
+        </form>
+        <div id="trackingResult" class="result"></div>
+    </div>
+</section>
+
+<section id="pricing" class="section">
+    <div class="container">
+        <div class="section-title">
+            <span>حاسبة الأسعار</span>
+            <h2>احسب تكلفة التوصيل</h2>
+            <p>اختر المنطقة وأدخل وزن الشحنة للحصول على سعر تقريبي.</p>
+        </div>
+        <div class="calculator">
+            <div class="field"><label for="area">المنطقة</label>
+                <select id="area">
+                    <option value="1">داخل صحار</option>
+                    <option value="2">شناص / لوى</option>
+                    <option value="3">صحم</option>
+                    <option value="4">مسقط</option>
+                    <option value="5">منطقة أخرى</option>
+                </select>
+            </div>
+            <div class="field"><label for="weight">الوزن (كجم)</label><input id="weight" type="number" min="0.1" value="1" step="0.1"></div>
+            <button class="btn primary" id="calculateBtn" type="button">احسب السعر</button>
+            <div id="priceResult" class="price-result">السعر التقريبي: <strong>1.500 ر.ع</strong></div>
+        </div>
+    </div>
+</section>
+
+<section id="order" class="section light">
+    <div class="container order-layout">
+        <div class="order-info">
+            <span class="section-label">اطلب خدمة التوصيل</span>
+            <h2>جاهزون لتوصيل طلبك</h2>
+            <p>املأ النموذج وسيتواصل معك فريقنا لتأكيد التفاصيل.</p>
+            <ul>
+                <li>✓ استلام من موقعك</li>
+                <li>✓ متابعة حالة الطلب</li>
+                <li>✓ تسليم آمن</li>
+            </ul>
+        </div>
+        <form id="orderForm" class="form-card">
+            <div class="form-row">
+                <div class="field"><label>الاسم</label><input id="name" type="text" required></div>
+                <div class="field"><label>رقم الهاتف</label><input id="phone" type="tel" placeholder="9XXXXXXX" required></div>
+            </div>
+            <div class="form-row">
+                <div class="field"><label>موقع الاستلام</label><input id="pickup" type="text" required></div>
+                <div class="field"><label>موقع التسليم</label><input id="dropoff" type="text" required></div>
+            </div>
+            <div class="field"><label>نوع الشحنة</label>
+                <select id="packageType">
+                    <option>طرد</option><option>مستندات</option><option>طلب متجر</option><option>أخرى</option>
+                </select>
+            </div>
+            <button class="btn primary full" type="submit">إرسال طلب التوصيل</button>
+            <div id="orderMessage" class="form-message"></div>
+        </form>
+    </div>
+</section>
+
+<section class="section testimonials">
+    <div class="container">
+        <div class="section-title"><span>آراء العملاء</span><h2>ماذا يقول عملاؤنا؟</h2></div>
+        <div class="cards">
+            <article class="review"><div class="stars">★★★★★</div><p>“خدمة ممتازة والتوصيل كان أسرع مما توقعت.”</p><b>— أحمد</b></article>
+            <article class="review"><div class="stars">★★★★★</div><p>“التعامل راقٍ وسهلت علي متابعة طلبي.”</p><b>— مريم</b></article>
+            <article class="review"><div class="stars">★★★★★</div><p>“مناسب جدًا للمتاجر الإلكترونية، أنصح به.”</p><b>— خالد</b></article>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container contact-content">
+        <div><span class="section-label">تواصل معنا</span><h2>نحن هنا لخدمتك</h2><p>للاستفسارات والطلبات، تواصل معنا عبر القنوات التالية.</p></div>
+        <div class="contact-items">
+            <a href="tel:+96890000000">📞 <span>+968 9000 0000</span></a>
+            <a href="https://wa.me/96890000000" target="_blank">💬 <span>واتساب</span></a>
+            <a href="mailto:info@wasselni.om">✉️ <span>info@wasselni.om</span></a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer><div class="container footer"><div class="logo"><span>وصّلني</span> للتوصيل</div><p>© 2026 وصّلني للتوصيل. جميع الحقوق محفوظة.</p></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
